@@ -8,11 +8,11 @@ int main(){
     cout<<"enter the value to check positive or negative";
     cin>>n;
     
-    if(n>0){
-        cout<<"n is positive integer";
+    if(n<0){
+        cout<<"n is negative integer";
     }
-    else if (n<0){
-        cout<<"n is a negative integer"<<endl;
+    else if (n>0){
+        cout<<"n is a positive integer"<<endl;
     }
 //else if(n == 0){
 //         cout<<"n is 0"<<endl;
