@@ -1,1 +1,1 @@
-char first = 'A';
+char val= 'A';
