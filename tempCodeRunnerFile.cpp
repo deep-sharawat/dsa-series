@@ -1,1 +1,1 @@
-count = count +1;
+char first = 'A';

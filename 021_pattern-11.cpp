@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 int main(){
@@ -17,7 +18,6 @@ int main(){
          first = first+1;
     }
 }
-
 
 // //by formula 
 // #include <iostream>
