@@ -1,18 +1,21 @@
-#include<iostream>
+#include <iostream>
+#include<math.h>
 using namespace std;
 int main(){
 
-    int n ;
-    cin>>n;
-    bool isPrime = 1;
+    int m;
+    cin>>m;
+    int ans2 = 0;
+    int j = 0;
+    int d;
+    while(m !=0){
+        int c = m%10;
+        if(c == 0){
+            d = 1;
+        }else if (c ==1){d = 0;}
+        ans2 = (d*pow(10,j))+ans2;
+        m = m/10;
+        j++;
+    }cout<<ans2;
 
-    for(int i = 2; i<n ; i++){
-        if(n%i == 0){
-            isPrime =0;
-            break;
-        }i++;
-    }
-    if(isPrime ==1){
-        cout<<"prime";
-    }else{cout<<"not prime";}
 }
