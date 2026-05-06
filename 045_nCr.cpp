@@ -16,7 +16,7 @@ int nCr(int p , int q){
 }
 int main(){
     int a,b;
-    cout<<"enter the value to ncr";
+    cout<<"enter the value to ncr : ";
     cin>>a>>b;
     cout<<nCr(a,b);
 }

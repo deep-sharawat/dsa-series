@@ -13,7 +13,6 @@ int main(){
     int n;
     cout<<"enter the value to check : ";
     cin>>n;
-    cout<<endl;
   
     if(isEven(n) ){
         cout<<"even";
