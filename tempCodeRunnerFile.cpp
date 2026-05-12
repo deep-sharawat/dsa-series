@@ -23,9 +23,9 @@ int main(){
 
     int array[6] = {1,2,3,4,5,6};
 
-    int bb = linearSearch(array, 6,1);
+    int bb = linearSearch(array, 6, 5);
 
-    if(bb  == -1){
+    if(bb  = -1){
         cout<<"element is not present in the array"<<endl;
     }else{
         cout<<"element is present at the index "<<bb;
