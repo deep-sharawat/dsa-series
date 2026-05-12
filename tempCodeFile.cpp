@@ -1,35 +1,34 @@
 #include <iostream>
 using namespace std;
+int linearSearch(int arr[], int size, int key){
 
-int binarySearch(int arr[], int size, int key){
-    int start = 0; //start index
-    int end = size - 1; // end index
+    int start = 0;
+    int end = size-1;
 
-    int mid  = (start + (end-start)/2);
+    while ( start <= end){
 
-    while(start <= end){
-        if (arr[mid] == key){
-            return mid;
-        }if(arr[mid] < key){
-            start = mid+1;
-
-        }else{
-            end = mid-1;
+        if (arr[start] == key){
+            return start;
         }
-        mid = (start + (end-start)/2);
-
-
-    }return -1; //jab kuch na mile 
+            start++;
+       
+    }return -1;
 
 }
 
 
 int main(){
-    int even[6] = {2,4,6,8,12,18};
-    int odd[5] = {3,8,11,14,16};
 
 
-    int a = binarySearch(even , 8, 112);
-    cout<<"index is : "<<a;
 
+    int array[6] = {1,2,3,4,5,6};
+
+    int bb = linearSearch(array, 6, 5);
+
+    if(bb  = -1){
+        cout<<"element is not present in the array"<<endl;
+    }else{
+        cout<<"element is present at the index "<<bb;
+    }
+    
 }
