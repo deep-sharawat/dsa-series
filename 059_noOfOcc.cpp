@@ -1,19 +1,59 @@
-#include<iostream>
+// number of occurrences using binary search
+//just one change in file number 058
+
+#include <iostream>
 using namespace std;
 
-int occ(int arr[], int size, int key){
+int first(int arr[], int size , int key){
     int start = 0;
-    int end = size -1;
-    int number = 0;
-    int mid = start - (end -start)/2;
+    int end = size-1;
+    int mid = start + (end-start)/2;
+    int ans = -1;
 
-    while (start <= end){
-        if (arr[mid] == )
+    while(start <= end){
+        if(arr[mid] == key){
+            ans = mid;
+            end = mid-1;
+        }else if (arr[mid] < key){
+            start = mid+1;
+        }else if(arr[mid] > key){
+            end = mid-1;
+        }
+        mid = start + (end-start)/2;
     }
+    return ans;
 }
 
+
+int last(int arr[], int size , int key){
+    int start = 0;
+    int end = size-1;
+    int mid = start + (end-start)/2;
+    int ans = -1;
+
+    while(start <= end){
+        if(arr[mid] == key){
+            ans = mid;
+            start = mid+1;
+        }else if (arr[mid] < key){
+            start = mid+1;
+        }else if(arr[mid] > key){
+            end = mid-1;
+        }
+        mid = start + (end-start)/2;
+    }
+    return ans;
+}
+
+
+
+
+
+
 int main(){
+    int even[5] = {1,2,3,3,5};
+    int a = first(even , 5, 2);
+    int b = last(even,5,2);;
 
-        int array[7] = {1,2,3,3,3,3,9};
-
+    cout<<b-a+1;
 }
