@@ -1,27 +1,39 @@
 #include <iostream>
 using namespace std;
 
-int max(int arr[], int size){
+// function returns index of peak element
+int peakIndex(int arr[], int size){
+
     int start = 0;
-    int end = size -1;
-    int mid = start +(end - start)/2;
+    int end = size - 1;
 
-    while (start<end){
-        if(arr[mid] < arr[mid+1]){
-            start = mid+1;
-        }else {
+    while(start < end){
+
+        int mid = start + (end - start)/2;
+
+        // we are on increasing side
+        if(arr[mid] < arr[mid + 1]){
+            start = mid + 1;
+        }
+
+        // we are on decreasing side
+        else{
             end = mid;
-        }mid = start +(end - start)/2;
-      
+        }
     }
-return start;
 
+    // start and end both point to peak
+    return start;
 }
+
 int main(){
 
-    int arrayb[10] = {1,2,3,7,8,9,1111,1111111,4,0};
-    int a = sizeof(arrayb)/sizeof(int);
-    
-    int b = max(arrayb,a);
-    cout<<"peak element is : "<<arrayb[b];
+    int arr[10] = {1,2,3,7,8,9,1111,1111111,4,0};
+
+    // calculate array size
+    int size = sizeof(arr)/sizeof(arr[0]);
+
+    int peak = peakIndex(arr, size);
+
+    cout << "Peak element is : " << arr[peak];
 }
