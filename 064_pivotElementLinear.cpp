@@ -6,7 +6,7 @@ int pivot(int arr[], int size){
     int end = size-1;
     int ele = INT_MIN;
 
-    while (start<= end){
+    while (start < end){
         if(ele < arr[start]){
             ele = arr[start];
         } start++;
